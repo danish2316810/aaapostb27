@@ -1,0 +1,21 @@
+<mvc:View controllerName="app.postb27.controller.CreateView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:comp="sap.ui.comp.filterbar"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="idCre" title="{i18n>create}">
+        <content />
+        <f:SimpleForm>
+            <Label text="Customer id"></Label>
+            <Input id="idId"></Input>
+            <Label text="Customer Name"></Label>
+            <Input id="idName"></Input>
+            <Label text="Date" ></Label>
+            <Input id="idDate" type="Date"></Input>
+            <Label text="Currecncy"></Label>
+            <Input id="idCurr"></Input>
+            <Button text="Submit" press="onSubmit"/>
+        </f:SimpleForm>
+
+    </Page>
+</mvc:View>

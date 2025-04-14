@@ -1,0 +1,9 @@
+<mvc:View controllerName="app.postb27.controller.DetailView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:comp="sap.ui.comp.filterbar">
+    <Page id="idDet" title="{i18n>detail}">
+        <content />
+
+    </Page>
+</mvc:View>

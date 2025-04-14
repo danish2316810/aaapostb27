@@ -1,0 +1,97 @@
+<mvc:View controllerName="app.postb27.controller.CustomerView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:comp="sap.ui.comp.filterbar">
+    <Page id="page" title="{i18n>title}">
+        <content />
+
+        <comp:FilterBar>
+            <comp:filterItems>
+                    <comp:FilterItem name="A" label="Filter Name">
+                        
+                      <comp:control>
+                         
+                         <Input id="idFilterName" liveChange="onFilter"></Input>
+                      </comp:control>
+                    </comp:FilterItem>
+                    <comp:FilterItem name="B" label="Filter Currency">
+                        <comp:control>                            
+                           <Input id="idFilterCurr" liveChange="onFilter"></Input>
+                        </comp:control>
+                    </comp:FilterItem>
+            </comp:filterItems>
+          
+        </comp:FilterBar>
+
+
+
+<Table items="{CustomerModel>/}" 
+        id="idMTable" selectionChange="onRowSelect" mode="SingleSelectMaster">
+            <columns>
+               <Column >
+                  <Text text="Customerid"></Text>
+               </Column>
+               <Column >
+                <Text text="Custname"></Text>
+               </Column>
+               <Column >
+                    <Text text="Currency"></Text>
+               </Column>
+               <Column >
+                <Text text="Dateofjoin"></Text>
+               </Column>
+               
+            </columns>
+            <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{CustomerModel>Customerid}" />
+                            <Text text="{CustomerModel>Custname}" />
+                            <Text text="{CustomerModel>Currency}" />
+                            <Text text="{path:'CustomerModel>Dateofjoin', type:'sap.ui.model.type.Date',formatOptions:{pattern:'dd-MM-yyyy'} }" />
+                            
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+        </Table>
+
+        <!-- <Table items="{/customerEntitySet}" 
+        id="idMTable" selectionChange="onRowSelect" mode="SingleSelectMaster">
+            <columns>
+               <Column >
+                  <Text text="Customerid"></Text>
+               </Column>
+               <Column >
+                <Text text="Custname"></Text>
+               </Column>
+               <Column >
+                    <Text text="Currency"></Text>
+               </Column>
+               <Column >
+                <Text text="Dateofjoin"></Text>
+               </Column>
+               
+            </columns>
+            <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{Customerid}" />
+                            <Text text="{Custname}" />
+                            <Text text="{Currency}" />
+                            <Text text="{path:'Dateofjoin', type:'sap.ui.model.type.Date',formatOptions:{pattern:'dd-MM-yyyy'} }" />
+                            
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+        </Table> -->
+      <footer>
+        <OverflowToolbar >
+           <ToolbarSpacer />
+              <Button text="Create" press="onCreate" width="80px"/>
+          
+        </OverflowToolbar>
+      </footer>
+    </Page>
+</mvc:View>
