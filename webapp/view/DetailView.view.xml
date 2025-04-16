@@ -1,9 +1,26 @@
 <mvc:View controllerName="app.postb27.controller.DetailView"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m"
-    xmlns:comp="sap.ui.comp.filterbar">
+    xmlns:comp="sap.ui.comp.filterbar"
+    xmlns:f="sap.ui.layout.form">
     <Page id="idDet" title="{i18n>detail}">
         <content />
-
+            <f:SimpleForm>
+            
+                <Label text="CusotmerId"></Label>
+                <Text text="{CustomerModel>Customerid}"></Text>
+                <Label text="Customer Name"></Label>
+                <Text text="{CustomerModel>Custname}"></Text>
+                <Label text="Date"></Label>
+                <Text text="{CustomerModel>Dateofjoin}"></Text>
+                <Label text="Currecncy"></Label>
+                <Text text="{CustomerModel>Currency}"></Text>
+            </f:SimpleForm>
+            <footer>
+                <OverflowToolbar >
+                    <ToolbarSpacer />
+                        <Button text="Update"/>
+                </OverflowToolbar>
+            </footer>
     </Page>
 </mvc:View>

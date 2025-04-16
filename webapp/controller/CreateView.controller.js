@@ -11,6 +11,7 @@ function (Controller,MessageBox) {
                 //   oRouter.attachRoutePatternMatched(this.onRouteMatached, this)
         },
         
+       
             onSubmit:function(oEvent){
                     let oModel=this.getOwnerComponent().getModel()
                     let entity="/customerEntitySet"
@@ -49,7 +50,7 @@ function (Controller,MessageBox) {
                                      })
                             },
                             error:function(oError){
-                                MessageBox.success("failed")
+                                MessageBox.error("failed")
                             }
                         })
 

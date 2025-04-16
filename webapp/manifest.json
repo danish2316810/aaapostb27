@@ -67,6 +67,9 @@
                 "dataSource": "mainService",
                 "preload": true,
                 "settings": {}
+            },
+            "CustomerModel":{
+                "type":"sap.ui.model.json.JSONModel"
             }
         },
         "resources": {
@@ -96,7 +99,7 @@
                 },
                 {
                     "name": "RouteDetailView",
-                    "pattern": "detail",
+                    "pattern": "detail/{id}",
                     "target": [
                         "TargetDetailView"
                     ]
