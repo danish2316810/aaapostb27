@@ -1,0 +1,29 @@
+<mvc:View controllerName="app.postb27.controller.UpdateView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:comp="sap.ui.comp.filterbar"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="idUpd" title="{i18n>create}">
+        <content />
+        <f:SimpleForm>
+            <Label text="Customer id"></Label>
+            <Input id="idIdUp" enabled="false" value="{CustomerModel>Customerid}"></Input>
+            <Label text="Customer Name"></Label>
+            <Input id="idNameUp" value="{CustomerModel>Custname}"></Input>
+            <Label text="Date" ></Label>
+            <!-- <Input id="idDateUp" type="Date" value="{CustomerModel>Dateofjoin}"></Input> -->
+            <Input id="idDateUp"  
+                    value="{
+                    path:'CustomerModel>Dateofjoin',
+                    type:'sap.ui.model.type.Date',
+                    formatOptions:{
+                        pattern:'yyyy-MM-dd'
+                        }
+                    }"></Input>
+            <Label text="Currecncy"></Label>
+            <Input id="idCurrUp" value="{CustomerModel>Currency}"></Input>
+            <Button text="Update" press="onUpdate"/>
+        </f:SimpleForm>
+
+    </Page>
+</mvc:View>

@@ -6,8 +6,8 @@
     <Page id="idCre" title="{i18n>create}">
         <content />
         <f:SimpleForm>
-            <Label text="Customer id"></Label>
-            <Input id="idId"></Input>
+            <Label text="Customer id" ></Label>
+            <Input id="idId" ></Input>
             <Label text="Customer Name"></Label>
             <Input id="idName"></Input>
             <Label text="Date" ></Label>

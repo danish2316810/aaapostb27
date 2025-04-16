@@ -110,6 +110,13 @@
                     "target": [
                         "TargetCreateView"
                     ]
+                },
+                {
+                    "name": "RouteUpdateView",
+                    "pattern": "update/{index}",
+                    "target": [
+                        "TargetUpdateView"
+                    ]
                 }
             ],
             "targets": {
@@ -127,6 +134,10 @@
                  "TargetCreateView" :{
                     "viewId": "idCreateView",
                     "viewName": "CreateView"
+                 },
+                 "TargetUpdateView":{
+                    "viewId": "idUpdateView",
+                    "viewName": "UpdateView"
                  }
             }
         },

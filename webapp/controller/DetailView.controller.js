@@ -15,6 +15,15 @@ function (Controller) {
                 let sPath="CustomerModel>/"+ sIndex
                 let oView=this.getView()
                 oView.bindElement(sPath)
+        },
+        onPressEdit:function(oEvent){
+            let sPath=oEvent.getSource().getBindingContext("CustomerModel").sPath
+            let aItems=sPath.split("/")
+            let sPath2=aItems[aItems.length-1]
+            let oRouter=this.getOwnerComponent().getRouter()
+                oRouter.navTo("RouteUpdateView",{
+                    index:sPath2
+                })
         }
         
 
